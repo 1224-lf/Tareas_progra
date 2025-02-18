@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Conoce tu zodiaco</h2>
+
+<form onsubmit="calcularZodiaco(event)"> 
+  <label for="fmes">Mes:</label><br>
+  <input type="number" id="fmes" name="fmes" value="1" min="1" max="12"><br>
+  <label for="ldia">Día:</label><br>
+  <input type="number" id="ldia" name="ldia" value="1" min="1" max="31"><br><br>
+  <input type="submit" value="Buscar!!!">
+</form> 
+<script> 
+function calcularZodiaco (event)
+{
+
+    event.preventDefault();
+    var formzodiaco=event.target
+    var formdatazodiaco= new FormData (formzodiaco)
+    var valoresform=Object.fromEntries(formdatazodiaco)
+
+    var valormes= valoresform.fmes
+    var valordia= valoresform.ldia
+
+    
+    if((valormes ==3 && valordia >=21) || (valormes ==4 && valordia <=19)){
+        alert("Aries")
+    }
+    else if ((valormes ==4 && valordia >=20) || (valormes ==5 && valordia <=20)){
+        alert("Tauro")
+    }
+    else if ((valormes ==5 && valordia >=21) || (valormes ==6 && valordia <=20)){
+        alert("Geminis")
+    }
+    else if ((valormes ==6 && valordia >=21) || (valormes ==7 && valordia <=22)){
+        alert("Cancer")
+    }
+    else if ((valormes ==7 && valordia >=23) || (valormes ==8 && valordia <=22)){
+        alert("Leo")
+    }
+    else if ((valormes ==8 && valordia >=23) || (valormes ==9 && valordia <=22)){
+        alert("Virgo")
+    }
+    else if ((valormes ==9 && valordia >=23) || (valormes ==10 && valordia <=22)){
+        alert("Libra")
+    }
+    else if ((valormes ==10 && valordia >=23) || (valormes ==11 && valordia <=21)){
+        alert("Escorpio")
+    }
+    else if ((valormes ==11 && valordia >=22) || (valormes ==12 && valordia <=21)){
+        alert("Sagitario")
+    } 
+    else if ((valormes ==12 && valordia >=22) || (valormes ==1 && valordia <=19)){
+        alert("Capricornio")
+    }
+    else if ((valormes ==1 && valordia >=20) || (valormes ==2 && valordia <=18)){
+        alert("Acuario")
+    }
+    else if ((valormes ==2 && valordia >=19) || (valormes ==3 && valordia <=20)){
+        alert("Picis")
+    }
+ }
+</script>
+
+
+
+
+</body>
+</html>
